@@ -1,8 +1,9 @@
-$(document).ready(function() {
 
-  $('#ex1').slider({
-      formatter: function(value) {
-        return 'Current value: ' + value;
-      }
-    });
-});
+function hello() {
+  chrome.tabs.executeScript({
+    file: 'alert.js'
+  }); 
+}
+
+
+document.getElementById('clickme').addEventListener('click', hello);
